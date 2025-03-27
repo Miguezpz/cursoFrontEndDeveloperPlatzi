@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        div {
+            background: salmon;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        a {
+            background:skyblue;
+            /* Los elementos con display inline no 
+            pueden cambiar en dimensiones debido a ser inline,
+            no produce efecto el intentar manipular width y height */
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        button {
+            background:slateblue;
+            color: white;
+            width: 200px;
+            height: 200px;
+        }
+
+        button:active {
+            background-color: black;
+        }
+    
+
+    </style>
+</head>
+<body>
+
+    <div> 
+        Bloque
+    </div>
+
+    <a href="/">Inline</a>
+
+    <button>Inline block</button>
+
+</body>
+</html>

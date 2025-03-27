@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: papayawhip;
+        }
+
+        /* A todos los elementos p dentro de div */
+        div p {
+            color: lime;
+        }
+
+        /* A un hijo directo */
+        div > h1 {
+            background-color: plum;
+        }
+
+        div > div {
+            background: palegreen;
+        }
+
+        .scnd-div {
+            background:red;
+        }
+
+        /* Indica que unicamente el section que se encuentra junto
+        a un div se le debe de aplicar el estilo */
+        div + section { 
+            background: palevioletred;
+        }
+
+        div ~ p {
+            color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+
+    <div>
+        <p>Platzi</p>
+        <p>Es</p>
+        <p>Increible</p>
+    </div>
+
+    <div>
+        <h1>Platzi</h1>
+        <div>Es</div>
+        <div class="scnd-div">Increible</div>
+    </div>
+
+    <p>
+       Clase de selectores 
+    </p>
+
+    <section>
+        Es lo mejor
+    </section>
+
+    <div>
+        Master
+    </div>
+
+    <section>Seccion de espacio</section>
+
+    <p>Un p en soledad</p>
+
+</body>
+</html>

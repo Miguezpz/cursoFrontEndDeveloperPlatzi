@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: blue;
+            padding: 1%;
+        }
+        
+        section {
+            background: rgb(82, 82, 253);
+            width: 90%;
+            height: 300px;
+            margin: 2% auto;
+            position: relative;
+        }
+
+        section div {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        section > div {
+            width: 90px;
+            height: 90px;
+        }
+
+        section div:nth-child(1) {
+            background: green;
+            top: 30%;  
+            left: 10%;
+        }
+
+        section div:nth-child(2) {
+            background-color: yellow;
+            top: 20%;  
+            left: 20%;
+        }
+
+        section div:nth-child(3) {
+            background-color: green;
+            top: 30%;  
+            left: 30%;
+        }
+
+        section div:nth-child(4) {
+            background-color: yellow;
+            top: 20%;  
+            left: 40%;
+        }
+
+        section div:nth-child(5) {
+            background-color: green;
+            top: 30%;  
+            left: 50%;
+        }
+
+        section div:nth-child(6) {
+            background-color: yellow;
+            top: 20%;  
+            left: 60%;
+            position: absolute;
+        }
+
+        section div:nth-child(6) .ojo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            height: 15%;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            position: absolute;
+        }
+
+        section div:nth-child(6) .ojo div {
+            width: 15%;
+            height: 15%;
+            background-color: black;
+            width: 8px;
+            height: 8px;
+        }
+
+        section div:nth-child(6) .ojo:nth-child(1) {
+            /* background-color: red; */
+            top: 20%;  
+            left: 60%;
+        }
+
+        section div:nth-child(6) .ojo:nth-child(2) {
+            /* background-color: blue; */
+            top: 20%;  
+            left: 20%;
+        }
+
+        section div:nth-child(6) .boca {
+            width: 15px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            background: white;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <div class="ojo">
+                <div class="pupila"></div>
+            </div>
+
+            <div class="ojo">
+                <div class="pupila"></div>
+            </div>
+            
+            <div class="boca"></div>
+        </div>
+    </section>
+</body>
+</html>

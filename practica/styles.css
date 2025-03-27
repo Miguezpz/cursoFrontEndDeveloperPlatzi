@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    background: rgba(255, 153, 0, 0.74);
+    position:relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    width: 100%;
+    height: 5vw;
+    background: purple;
+    color: white;
+    top: 0; /* Add this line to define the sticky position */
+}
+
+nav div {
+    display: flex;
+    background-color: red;
+    border: 1px solid black;
+    margin: 1% 0;
+    display: inline;
+    width: auto;
+    height: auto;
+    text-align: center;
+
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header:hover h1::after {
+    background-color: black;
+    color: white;
+    content: '🥶';
+}
+
+header h1:hover::before {
+    content: '🎃Halloween';
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main section {
+    margin-top: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: 100%;
+    gap: 100px;
+    padding: 10px;
+    position:relative;
+
+    background: rgba(0, 0, 0, 0.356);
+    border: black solid 1px;
+}
+
+main section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    text-align: center;
+}  
+
+main section div:nth-child(odd) {
+    color: black;
+}
+
+main section div:nth-child(1) {
+    background: peachpuff;
+
+    position: static;
+}
+
+main section div:nth-child(2) {
+    background: green;
+    position: absolute;
+    
+    top: 50%;
+    right: 50%;
+}
+
+main section div:nth-child(3) {
+    background: khaki;
+    position: fixed;
+}
+
+main section div:nth-child(4) {
+    background: hotpink;
+}
+
+main > div {
+    width: 100%;
+    background: rgb(58, 58, 58);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 20px 0;    
+    
+}
+
+main > div > ol, ul {
+    margin: 100px 0;
+    border: white 2px solid;
+    padding: 50px;
+    position: sticky;
+    top: 0;
+}
+
+main > div:nth-child(even) {
+    background: gray;
+}
+
+main div li:nth-child(odd) {
+    background-color: rgb(229, 255, 0);
+    color: black;
+}
+
+
+main > div ul {
+    list-style-type: circle;
+}
+
+main div ol:hover > li::first-letter, ul:hover > li::first-letter {
+    text-transform: uppercase;
+}
+
+footer input:focus::placeholder {
+    color: orange;
+}
+
+footer a[href='https://www.google.com']:hover::before{
+    content:"😂"
+}
+
+footer a[href='https://www.youtube.com']:hover::before {
+    content: '😏';
+}

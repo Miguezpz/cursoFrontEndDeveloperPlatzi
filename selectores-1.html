@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            background-color: papayawhip;
+        }
+
+        div {
+            background: pink;
+        }
+
+        .title {
+            color: blueviolet;
+        }
+
+        #title2 {
+            color: brown;
+        }
+
+        /* Este tipo de selector dice que cualquier anchor
+        que tenga el href de platzi obtendra esos estilos. */
+        a[href="https://platzi.com/home/"] {
+            color: rgb(255, 0, 0);
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title">Hola</div>
+    <div id="title2">mundo</div>
+    <a href="https://platzi.com/home/">Go to Platzi</a>
+    <a href="https://google.com">Go to Google</a>
+</body>
+</html>
+
+
+<!-- 
+
+    Selectores Combinadores
+
+        Descendientes | div p
+        (Selecciona todos los elementos "p" que estén dentro de 
+        un elemento "div", sin importar cuán anidados estén. 
+        El espacio entre los elementos en el selector indica jerarquía, 
+        no posición física en la página)
+
+        Hijo directo | div > p
+        (Selecciona solo el hijo directo del elemento)
+
+        Elemento adyacente | div + p
+        (Selecciona el elemento que está inmediatamente 
+        después del otro, compartiendo el mismo elemento padre)
+
+        General de hermanos | div ~ p
+        (Selecciona todos los elementos hermanos que siguen al elemento 
+        especificado, compartiendo el mismo elemento padre)
+
+-->

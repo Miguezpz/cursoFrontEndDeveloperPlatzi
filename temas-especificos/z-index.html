@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background: rgb(27, 202, 27);
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 50%;
+            height: 50vh;
+            margin: 2% auto;
+            background-color: rgba(0, 0, 0, 0.074);
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .box > div {
+            text-align: center;
+            width: 30%;
+            font-size: larger;
+            height: 15%;
+        }
+
+        .uno {
+            background-color: red;
+        }
+
+        .dos {
+            background-color: yellow;
+        }
+
+        .tres {
+            background-color: orange;
+        }
+
+        .cuatro {
+            background-color: white;
+        }
+
+
+
+        .box-clon {
+            /* display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: space-evenly; */
+            width: 50%;
+            height: 30vh;
+            margin: 2% auto;
+            background-color: rgba(0, 0, 0, 0.074);
+            position: relative;
+        }
+
+        .box-clon > div {
+            text-align: center;
+            width: 50%;
+            font-size: larger;
+            height: 50%;
+            position: absolute;
+        }
+
+        .uno-clon {
+            background-color: red;
+            right: 0;
+            z-index: 5;
+        }
+
+        .dos-clon {
+            background-color: yellow;
+            right: 0;
+            z-index: 4;
+        }
+
+        .tres-clon {
+            background-color: orange;
+            bottom: 0;
+            left: 0;
+            z-index: 5;
+        }
+
+        .cuatro-clon {
+            background-color: white;
+            bottom: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        .box-clon .uno-clon:active, .box-clon .tres-clon:active {
+            z-index: 4;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <section class="box">
+        <div class="uno">Uno</div>
+        <div class="dos">Dos</div>
+        <div class="tres">Tres</div>
+        <div class="cuatro">Cuatro</div>
+    </section>
+
+    <section class="box-clon">
+        <div class="uno-clon">Uno</div>
+        <div class="dos-clon">Dos</div>
+        <div class="tres-clon">Tres</div>
+        <div class="cuatro-clon">Cuatro</div>
+    </section>
+</body>
+</html>
+
+<!-- Mision.
+ 
+    Lograr que usando CSS al hacer click sobre un elemento entonces cambie
+    su z index y de esa manera visualizar el contenido del otro rectangulo de
+    color.    
+-->

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1c574032ea.js" crossorigin="anonymous"></script>
+    <title>Prefessional Card</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* // <weight>: Use a value from 300 to 800
+        // <uniquifier>: Use a unique and descriptive class name */
+
+        .open-sans-font {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        body {
+            background: rgb(56, 56, 56);
+            font-family: open-sans-font;
+            color: white;
+        }
+
+        .card {
+            margin: 5% auto;
+            background-color: rgb(41, 41, 41);
+            width: 400px;
+            height: 600px;
+            border: transparent 1px solid;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: -12px 12px 22px -4px rgba(0,0,0,0.75);
+        }
+        
+        .card .div-img {
+            width: 180%;
+            height: 100%;
+        }
+
+        .card .div-img img {
+            width: 100%;
+            height: 33%;
+        }
+
+        .card .ppp {
+            width: 170px;
+            height: 170px;
+            background-color: rgb(243, 243, 243);
+            color: white;
+            position: absolute;
+            top: 33%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: transparent solid 1px;
+            border-radius: 50%;
+            z-index: 4;
+        }
+
+        .card .ppp img {
+            width: 97%;
+            height: 97%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .card .personal-info {
+            padding-top: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 66%;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .card .personal-info .name-skill-nationality {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 30px;
+        }
+
+        .card .personal-info .name-skill-nationality p:nth-child(1) {
+            color:white;
+            /* border: white 1px solid; */
+            /* border-bottom: rgba(172, 172, 172, 0.281) 2px solid;
+            padding-bottom: 1px;
+            margin-bottom: 10px; */
+        }
+
+        .card .personal-info .name-skill-nationality p:nth-child(2) {
+            color: rgb(172, 172, 172);
+            font-size: 90%;
+        }
+
+        .card .personal-info .name-skill-nationality p:nth-child(3) {
+            color: rgb(172, 172, 172);
+            font-size: 80%;
+        }
+
+
+        .card .personal-info .contact-information {
+            width: 60%;
+            color: rgb(172, 172, 172);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: black; */
+            margin-bottom: 30px;
+        }
+
+        .card .personal-info .social-media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background: orange; */
+            width: 50%;
+            height: 22px;
+        }
+
+        .card .personal-info .social-media > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: rgb(172, 172, 172) 1px solid;
+            box-shadow: -6px 6px 10px 0px rgba(0,0,0,0.55);
+            padding: 2px;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .card .personal-info .div-followers-follow {
+            background-color: rgba(0, 0, 0, 0.515);
+            width: 100%;
+            height: 25%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+
+    </style>
+</head>
+<body class="open-sans-font">
+    <section class="card">
+
+        <div class="div-img">
+            <img src="https://media.licdn.com/dms/image/v2/D5616AQHNmTmGqUjcjg/profile-displaybackgroundimage-shrink_350_1400/B56ZWUp9wlHsAc-/0/1741955785094?e=1748476800&v=beta&t=ugjU2of99gKI9DrkiXwgkVmAIDIxGGfMzMqIvBtWuzI" alt="imagen">
+        </div>
+
+        <div class="ppp">
+            <img src="./ppp.jpg" alt="">
+        </div>
+
+        <div class="personal-info">
+
+            <div class="name-skill-nationality">
+                <p>Miguel Jonathan</p>
+                <p>Full Stack Developer</p>
+                <p>🇲🇽 México</p>
+            </div>
+
+            <div class="contact-information">
+                <p>View projects</p>
+                <p>Send email</p>
+            </div>
+
+            <div class="social-media">
+                <div>
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-github fa-lg"></i>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-linkedin fa-lg"></i>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-facebook fa-lg"></i>
+                </div>
+            </div>
+
+            <div class="div-followers-follow">
+                <div class="followers">
+                    <p>Followers</p>
+                    <p>Following</p>
+                </div>
+
+                <div class="follow">
+                    <p>Button follow</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
+
+
+<!--  
+    https://images.pexels.com/photos/4589278/pexels-photo-4589278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+        
+    https://images.pexels.com/photos/20798382/pexels-photo-20798382/free-photo-of-snowcapped-mountains-under-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+    https://images.pexels.com/photos/20798382/pexels-photo-20798382/free-photo-of-snowcapped-mountains-under-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+-->

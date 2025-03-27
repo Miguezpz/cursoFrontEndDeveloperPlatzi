@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: lime;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background: plum;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid hotpink;
+            margin: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div>Platzi</div>
+    <div>Alma matter</div>
+</body>
+</html>
+
+<!-- 
+    Box sizing: border box 
+    
+    se encarga de que siempre mantenga
+    el ancho y alto que el usuario ha especificado,
+    lo que se altera es el contenido unicamente.
+
+    En el caso que un div aumente su padding o border, entonces su area
+    de contenido se achica, para que al sumar estos elementos
+    siga dando como resultado el ancho y alto definidos.
+-->
+
+<!-- 
+
+    Margin collapse
+
+
+        margins can merge together
+
+        Los margin se sobreponen verticalemnte cuando los elementos
+        están organizados en columna.
+
+    So that's our first rule: only vertical margins collapse.
+
+        Hice la prueba de colocar los divs en row, ajustando display
+        flex a body y en esa situación los margin de ambos divs toman
+        su espacio apropiado y no se sobre ponen.
+
+
+    📦 Las áreas del modelo de caja
+        Cada elemento HTML es una caja que tiene 4 
+        lados y se compone de cuatro áreas:
+
+        Internos:
+            content
+            padding
+            border
+            Externos
+            margin
+
+
+
+
+    Si deseas agregar espacio al exterior de un elemento, usas 
+    la propiedad margin. El margen es como agregar un cojín alrededor 
+    del elemento.
+
+    El margen sirve para aumentar la distancia entre hermanos. 
+    No esta pensado para aumentar la distancia entre un elemento hijo y 
+    su contenedor padre, para eso esta el padding.
+
+
+
+    La propiedad outline o contorno si se adapta al border radius 
+    automaticamente de su elemento. No ocupa espacio, ya que se encuentra entre
+    border y marign. Pero este no es siempre buena idea, ya que
+    al dar tab y bricar entre elementos funcionales este no se selecciona,
+    y para personas con disability entonces no lo podrán seleccionar con el
+    teclado. A tenerlo en cuenta bro. 
+-->
