@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1c574032ea.js" crossorigin="anonymous"></script>
-    <title>Prefessional Card</title>
+    <title>Professional Card</title>
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -27,7 +27,11 @@
         }
 
         body {
-            background: rgb(56, 56, 56);
+            background-color: #e5e5f7;
+            /* opacity: 0.8; */
+            background-image:  radial-gradient(#444cf7 2px, transparent 2px), radial-gradient(#444cf7 2px, #e5e5f7 2px);
+            background-size: 80px 80px;
+            background-position: 0 0,40px 40px;
             font-family: open-sans-font;
             color: white;
         }
@@ -97,7 +101,7 @@
             justify-content: center;
             align-items: center;
             gap: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .card .personal-info .name-skill-nationality p:nth-child(1) {
@@ -120,14 +124,15 @@
 
 
         .card .personal-info .contact-information {
-            width: 60%;
+            width: 50%;
             color: rgb(172, 172, 172);
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             /* background-color: black; */
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-size: 12px;
         }
 
         .card .personal-info .social-media {
@@ -143,7 +148,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: rgb(172, 172, 172) 1px solid;
+            border: rgba(172, 172, 172, 0.082) 1px solid;
             box-shadow: -6px 6px 10px 0px rgba(0,0,0,0.55);
             padding: 2px;
             border-radius: 4px;
@@ -152,14 +157,67 @@
         }
 
         .card .personal-info .div-followers-follow {
-            background-color: rgba(0, 0, 0, 0.515);
+            background-color: rgb(56, 56, 56);
             width: 100%;
             height: 25%;
             position: absolute;
             bottom: 0;
             left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
         }
 
+        .card .personal-info .div-followers-follow .div-followers {
+            /* background-color: purple; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div{
+            width: 100%;
+            height: 100%;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div p{
+            
+            /* background-color: rgb(0, 255, 110); */
+            font-size: 13px;
+            display: inline;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div p:nth-child(1){
+            color: white;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div p:nth-child(1){
+            color: rgb(192, 192, 192);
+        }
+
+        .card .personal-info .div-followers-follow .follow-button {
+            background-color: rgb(15, 15, 15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+        }
+
+        .card .personal-info .div-followers-follow .follow-button p {
+            /* background-color: purple; */
+            font-size: 20px;
+        }
 
     </style>
 </head>
@@ -167,11 +225,11 @@
     <section class="card">
 
         <div class="div-img">
-            <img src="https://media.licdn.com/dms/image/v2/D5616AQHNmTmGqUjcjg/profile-displaybackgroundimage-shrink_350_1400/B56ZWUp9wlHsAc-/0/1741955785094?e=1748476800&v=beta&t=ugjU2of99gKI9DrkiXwgkVmAIDIxGGfMzMqIvBtWuzI" alt="imagen">
+            <img src="https://images.pexels.com/photos/20798382/pexels-photo-20798382/free-photo-of-snowcapped-mountains-under-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="imagen">
         </div>
 
         <div class="ppp">
-            <img src="./ppp.jpg" alt="">
+            <img src="https://avatars.githubusercontent.com/u/100096535?s=400&v=4" alt="">
         </div>
 
         <div class="personal-info">
@@ -206,13 +264,21 @@
             </div>
 
             <div class="div-followers-follow">
-                <div class="followers">
-                    <p>Followers</p>
-                    <p>Following</p>
+                <div class="div-followers">
+
+                    <div>
+                        <p>Followers</p>
+                        <p>2.4k</p>
+                    </div>
+                    
+                    <div>
+                        <p>Following</p>
+                        <p>697</p>
+                    </div>
                 </div>
 
-                <div class="follow">
-                    <p>Button follow</p>
+                <div class="follow-button">
+                    <p>+ FOLLOW</p>
                 </div>
             </div>
         </div>
@@ -227,5 +293,5 @@
         
     https://images.pexels.com/photos/20798382/pexels-photo-20798382/free-photo-of-snowcapped-mountains-under-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 
-    https://images.pexels.com/photos/20798382/pexels-photo-20798382/free-photo-of-snowcapped-mountains-under-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+    https://media.licdn.com/dms/image/v2/D5616AQHNmTmGqUjcjg/profile-displaybackgroundimage-shrink_350_1400/B56ZWUp9wlHsAc-/0/1741955785094?e=1748476800&v=beta&t=ugjU2of99gKI9DrkiXwgkVmAIDIxGGfMzMqIvBtWuzI
 -->
