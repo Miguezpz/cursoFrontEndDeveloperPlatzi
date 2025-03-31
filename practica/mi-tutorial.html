@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1c574032ea.js" crossorigin="anonymous"></script>
+    <title>Flip card</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        /* // <weight>: Use a value from 300 to 800
+        // <uniquifier>: Use a unique and descriptive class name */
+
+        .open-sans-font {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        body {
+            background-color: #e5e5f7;
+            background-image:  radial-gradient(#444cf7 2px, transparent 2px), radial-gradient(#444cf7 2px, #e5e5f7 2px);
+            background-size: 80px 80px;
+            background-position: 0 0,40px 40px;
+            color: white;
+        }
+
+        .card {
+            margin: 5% auto;
+            background-color: rgb(41, 41, 41);
+            width: 400px;
+            height: 600px;
+            border: transparent 1px solid;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: -12px 12px 22px -4px rgba(0,0,0,0.75);
+        }
+        
+        .card .div-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card .div-img img {
+            width: 100%;
+            height: 33%;
+        }
+
+        .card .div-ppp {
+            width: 170px;
+            height: 170px;
+            background-color: rgb(243, 243, 243);
+            color: white;
+            position: absolute;
+            top: 33%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: transparent solid 1px;
+            border-radius: 50%;
+            z-index: 4;
+        }
+
+        .card .div-ppp img {
+            width: 97%;
+            height: 97%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .card .personal-info {
+            padding-top: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 66%;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .card .personal-info .name-skill-nationality {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 40px;
+        }
+
+        .card .personal-info .name-skill-nationality p:nth-child(1) {
+            color:white;
+            font-size: 1.6rem;
+            /* border: white 1px solid; */
+            /* border-bottom: rgba(172, 172, 172, 0.281) 2px solid;
+            padding-bottom: 1px;
+            margin-bottom: 10px; */
+        }
+
+        .card .personal-info .name-skill-nationality p:nth-child(2) {
+            color: rgb(172, 172, 172);
+            font-size: 1.4rem;
+        }
+
+        .card .personal-info .name-skill-nationality p:nth-child(3) {
+            color: rgb(172, 172, 172);
+            font-size: 1.2rem;
+        }
+
+
+        .card .personal-info .contact-information {
+            width: 50%;
+            color: rgb(172, 172, 172);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /* background-color: black; */
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .card .personal-info .social-media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background: orange; */
+            width: 50%;
+            height: 22px;
+        }
+
+        .card .personal-info .social-media > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: rgba(172, 172, 172, 0.082) 1px solid;
+            box-shadow: -6px 6px 10px 0px rgba(0,0,0,0.55);
+            padding: 2px;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .card .personal-info .div-followers-follow {
+            background-color: rgb(56, 56, 56);
+            width: 100%;
+            height: 25%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers {
+            /* background-color: purple; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div{
+            width: 100%;
+            height: 100%;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div p{
+            
+            /* background-color: rgb(0, 255, 110); */
+            font-size: 1.3rem;
+            display: inline;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div p:nth-child(1){
+            color: white;
+        }
+
+        .card .personal-info .div-followers-follow .div-followers div p:nth-child(1){
+            color: rgb(192, 192, 192);
+        }
+
+        .card .personal-info .div-followers-follow .follow-button {
+            background-color: rgb(15, 15, 15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+        }
+
+        .card .personal-info .div-followers-follow .follow-button p {
+            /* background-color: purple; */
+            font-size: 2rem;
+        }
+
+
+
+        /* <-------------Flip card---------------> */
+
+        .flip-card {
+            margin: 100px auto;
+            background-color: transparent;
+            
+            width: 400px;
+            height: 600px;
+            position: relative;
+            perspective: 1000px;
+            border-radius: 20px;
+        }
+
+        .flip-card .inner-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+            display: flex;
+            
+        }
+
+        .flip-card:hover .inner-card {
+            transform: rotateY(180deg);
+            position: relative;
+        }
+
+        .flip-card .inner-card .front-face, .back-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            box-shadow: -12px 12px 22px -4px rgba(0,0,0,0.75);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .flip-card .inner-card .front-face {
+            background-color: rgb(41, 41, 41);
+            color: black;
+        }
+
+        .flip-card .inner-card .front-face img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .flip-card .inner-card .back-face {
+            background-color: rgb(41, 41, 41);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+
+
+        /* Estilos propios --------------------------------------------*/
+
+        .flip-card .inner-card .front-face {
+            position: relative;
+        }
+
+        .flip-card .inner-card .front-face .div-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            
+        }
+
+        .flip-card .inner-card .front-face .div-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .flip-card .inner-card .front-face .div-ppp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 195px;
+            height: 195px;
+            border-radius: 50%;
+            border: transparent solid 1px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flip-card .inner-card .front-face .div-ppp img {
+            width: 97%;
+            height: 97%;
+            border-radius: 50%;
+        }
+
+        .flip-card .inner-card .front-face .personal-info {
+            /* background-color: rgba(255, 166, 0, 0.461); */
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flip-card .inner-card .front-face .personal-info .name-skill-nationality {
+            /* background-color: gray; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 50%;
+            width: 100%;
+        }
+
+        .flip-card .inner-card .front-face .personal-info .name-skill-nationality p:nth-child(1) {
+            color:white;
+            font-size: 2rem;
+        }
+
+        .flip-card .inner-card .front-face .personal-info .name-skill-nationality p:nth-child(2) {
+            color: rgb(172, 172, 172);
+            font-size: 1.7rem;
+        }
+
+        .flip-card .inner-card .front-face .personal-info .name-skill-nationality p:nth-child(3) {
+            color: rgb(172, 172, 172);
+            font-size: 1.6rem;
+        }
+
+        .flip-card .inner-card .front-face .personal-info .user-name {
+            background-color: rgb(15, 15, 15);
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flip-card .inner-card .front-face .personal-info .user-name p {
+            font-size: 2rem;
+        }
+
+        .flip-card .inner-card .back-face {
+            background-color: rgb(41, 41, 41);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5%;
+        }
+
+        .flip-card .inner-card .back-face > div {
+            /* background-color: rgba(14, 101, 89, 0.762); */
+            width: 100%;
+        }
+
+        .flip-card .inner-card .back-face .about-me {
+            /* background-color: rgb(129, 249, 25); */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 50%;
+        }
+
+        .flip-card .inner-card .back-face .about-me p {
+            background-color: rgba(85, 85, 85, 0.422);
+            text-align: justify;
+            font-size: 1.2rem;
+            padding: 2%;
+            border-radius: 10px;
+        }
+
+        .flip-card .inner-card .back-face .contact-information {
+            width: 70%;
+            height: 5%;
+            color: rgb(172, 172, 172);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /* background-color: black; */
+            font-size: 1.4rem;
+        }
+
+        .flip-card .inner-card .back-face .social-media {
+            height: 100px;
+            width: 100px;
+            /* background-color: red; */
+            display: grid;
+            grid-template-columns: repeat(2, 45px);
+            grid-template-rows: repeat(2, 45px);
+            gap: 10px;
+        }
+
+        .flip-card .inner-card .back-face .social-media > div {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: rgb(0, 30, 255); */
+            border: rgba(172, 172, 172, 0.082) 1px solid;
+            box-shadow: -6px 6px 10px 0px rgb(0, 0, 0);
+            border-radius: 4px;
+        } 
+
+        .flip-card .inner-card .back-face .social-media > div i {
+            width: auto;
+            height: auto;
+            border: rgba(172, 172, 172, 0.082) 1px solid;
+            box-shadow: -6px 6px 10px 0px rgba(0,0,0,0.55);
+            /* padding: 2px; */
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body class="open-sans-font">
+    <section class="card">
+
+        <div class="div-img">
+            <img src="https://images.pexels.com/photos/20798382/pexels-photo-20798382/free-photo-of-snowcapped-mountains-under-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="imagen">
+        </div>
+
+        <div class="div-ppp">
+            <img src="https://avatars.githubusercontent.com/u/100096535?s=400&v=4" alt="">
+        </div>
+
+        <div class="personal-info">
+
+            <div class="name-skill-nationality">
+                <p>Miguel Jonathan</p>
+                <p>Full Stack Developer</p>
+                <p>🇲🇽 México</p>
+            </div>
+
+            <div class="contact-information">
+                <p>View projects</p>
+                <p>Send email</p>
+            </div>
+
+            <div class="social-media">
+                <div>
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-github fa-lg"></i>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-linkedin fa-lg"></i>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-facebook fa-lg"></i>
+                </div>
+            </div>
+
+            <div class="div-followers-follow">
+                <div class="div-followers">
+
+                    <div>
+                        <p>Followers</p>
+                        <p>2.4k</p>
+                    </div>
+                    
+                    <div>
+                        <p>Following</p>
+                        <p>697</p>
+                    </div>
+                </div>
+
+                <div class="follow-button">
+                    <p>+ FOLLOW</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-------------Flip card--------------->
+
+    <section class="flip-card">
+
+        <div class="inner-card">
+
+            <div class="front-face">
+
+                <div class="div-img">
+                    <img src="https://images.pexels.com/photos/4589278/pexels-photo-4589278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="magic img">
+                </div>
+
+                <div class="div-ppp">
+                    <img src="./ppp.jpg" alt="img-ppp">
+                </div>
+
+                <div class="personal-info">
+
+                    <div class="name-skill-nationality">
+                        <p>Miguel Jonathan</p>
+                        <p>Full Stack Developer</p>
+                        <p>🇲🇽 México</p>
+                    </div>
+                    
+                    <div class="user-name">
+                        <p>@Miguezpz</p>
+                    </div>
+                </div>
+                
+            </div>
+    
+            <div class="back-face">
+
+                <div class="about-me">
+
+                    <p>
+                        I'm an experienced Full Stack Web Developer with a strong 
+                        background in designing, developing, and optimizing web 
+                        applications. My expertise lies in JavaScript, including 
+                        modern frameworks and libraries, as well as Node.js, enabling 
+                        me to build scalable and efficient backend systems.
+                    </p>
+                    
+                    <p>
+                        I have a deep understanding of HTML, CSS, and responsive design 
+                        principles, ensuring intuitive and user-friendly front-end 
+                        experiences. Additionally, I am proficient in working with 
+                        Linux environments, version control systems like Git and 
+                        GitHub, and following best practices in software development, 
+                        deployment, and maintenance.
+                    </p>
+
+                    <p>
+                        Passionate about continuous learning, I stay up to date 
+                        with the latest web technologies and best practices to deliver 
+                        high-quality solutions.
+                    </p>
+
+                </div>
+
+                <div class="contact-information">
+                    <p>View projects</p>
+                    <p>Send email</p>
+                </div>
+    
+                <div class="social-media">
+                    <div>
+                        <i class="fa-brands fa-instagram fa-2xl"></i>
+                    </div>
+    
+                    <div>
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </div>
+    
+                    <div>
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </div>
+    
+                    <div>
+                        <i class="fa-brands fa-facebook fa-2xl"></i>
+                    </div>
+                </div>
+    
+                <div class="div-followers-follow">
+
+                    <div class="div-followers">
+    
+                        <div>
+                            <p>Followers</p>
+                            <p>2.4k</p>
+                        </div>
+                        
+                        <div>
+                            <p>Following</p>
+                            <p>697</p>
+                        </div>
+                    </div>
+    
+                    <div class="follow-button">
+
+                        <p>+ FOLLOW</p>
+                    </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
+
+
+<!--  
+    https://images.pexels.com/photos/4589278/pexels-photo-4589278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+        
+    https://images.pexels.com/photos/20798382/pexels-photo-20798382/free-photo-of-snowcapped-mountains-under-a-clear-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+    https://media.licdn.com/dms/image/v2/D5616AQHNmTmGqUjcjg/profile-displaybackgroundimage-shrink_350_1400/B56ZWUp9wlHsAc-/0/1741955785094?e=1748476800&v=beta&t=ugjU2of99gKI9DrkiXwgkVmAIDIxGGfMzMqIvBtWuzI
+-->
