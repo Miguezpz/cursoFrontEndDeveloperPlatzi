@@ -1,0 +1,17 @@
+@use '../utils/index.scss' as utils;
+
+.nav {
+    
+    @include utils.display-flex(row, center);
+    width: 100%;
+    height: 40px;
+    background-color: green;
+    
+    &__buttons-div {
+        width: 100%;
+        height: 100%;
+        background-color: purple;
+        @include utils.display-flex(row, space-around);
+    }
+}
+

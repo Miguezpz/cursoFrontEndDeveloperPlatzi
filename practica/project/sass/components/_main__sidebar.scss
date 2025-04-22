@@ -1,0 +1,9 @@
+@use '../utils/index.scss' as utils;
+
+.main__sidebar {
+    @include utils.display-flex(column, space-evenly);
+    background-color: orange;
+    width: 30%;
+    height: 70%;
+    padding: 10px;
+}

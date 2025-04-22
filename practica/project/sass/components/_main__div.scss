@@ -1,0 +1,10 @@
+@use '../utils/index.scss' as utils;
+
+.main__content {
+    @include utils.display-flex(column, space-evenly);
+    width: 60%;
+    //background-color: orange;
+    border-left: white 6px solid;
+    padding: 10px;
+    height: 70%;
+}
