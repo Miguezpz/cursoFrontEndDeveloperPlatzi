@@ -1,0 +1,56 @@
+$color-favorito: hotpink;
+
+@mixin display-flex($ancho, $alto) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: $ancho;
+    height: $alto;
+    background-color: $color-favorito;
+}
+
+body {
+    background: #34bd78
+}
+
+.section {
+    background: rgb(120, 0, 241)
+}
+
+.card {
+    
+    margin: 10px auto;
+    @include display-flex(90%, 200px);
+
+    &__image {
+        width: 25%;
+        height: 15%;
+        background-color: gray;
+        color: white;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    
+
+    & .button {
+        width: 25%;
+        height: 15%;
+        background-color: gray;
+        color: white;
+
+        &:hover {
+            background-color: rgba(150, 250, 0, 0.719);
+            color: rgba(0, 0, 0, 0.733);
+        }
+
+        &:active {
+            background-color: greenyellow;
+            color: black;
+        }   
+    }
+}

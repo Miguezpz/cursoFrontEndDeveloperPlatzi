@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .footer {
+            background-color: aquamarine;
+        }
+
+        .footer__button {
+            background-color: blue;
+            color: white;
+        }
+
+        .active {
+            background-color: black;
+            color: white;
+        }
+
+        /* 
+            SASS
+
+            class xstyle
+            class xstyle__button
+        */
+
+        .xstyle {
+            display: none;
+
+            &__button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="header__nav">
+            <button class="header__button"></button>
+            <input type="text" class="header__input">
+            <p class="header__p"></p>
+        </nav>
+    </header>
+
+    <div class="card">
+        <img src="" alt="card__img">
+        <p class="card__text">Descripción traje</p>
+        <p class="card__text">Precio</p>
+    </div>
+
+    <section class="section">
+        <div>
+            <h2 class="section__text section__text--primary">FALCON 9</h2>
+            <p class="section__text section__text--secondary-semibold">
+                Falcon 9, the world's first orbital class reusable rocket...
+            </p>
+            <p class="section__text section__text--secondary-bold">
+                Learn more about Falcon 9
+            </p>
+
+            <ul class="list">
+
+                <li class="list__item">
+                    <span class="list__text">VEHICLE HEIGHT</span>
+                    <div>
+                        <span class="list__text">70m</span>
+                        <span class="list__text list__text--gray">/229.6 ft</span>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <span class="list__text">VEHICLE DIAMETER</span>
+                    <div>
+                        <span class="list__text">3.7m</span>
+                        <span class="list__text list__text--gray">/12 ft</span>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <span class="list__text">FAIRING HEIGHT</span>
+                    <div>
+                        <span class="list__text">13.1m</span>
+                        <span class="list__text list__text--gray">/43 ft</span>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <span class="list__text">FAIRING DIAMETER</span>
+                    <div>
+                        <span class="list__text">5.2m</span>
+                        <span class="list__text list__text--gray">/17.1 ft</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        
+            <button class="footer__button">Botón mágico</button>
+        
+    </footer>
+
+    <script>
+        const FOOTER_BUTTON = document.querySelector('.footer__button')
+
+        FOOTER_BUTTON.addEventListener( 'mousedown', () => {
+            FOOTER_BUTTON.textContent = 'La vida es deliciosa'
+            FOOTER_BUTTON.classList.add('active')
+        })
+
+        FOOTER_BUTTON.addEventListener( 'mouseup', () => {
+            FOOTER_BUTTON.textContent = 'Botón mágico'
+            FOOTER_BUTTON.classList.remove('active')
+        })
+    </script>
+</body>
+</html>

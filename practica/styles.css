@@ -26,6 +26,7 @@ nav {
     background: purple;
     color: white;
     top: 0; /* Add this line to define the sticky position */
+    z-index: 8;
 }
 
 nav div {
@@ -131,6 +132,10 @@ main > div {
     margin: 50px 0;
     padding: 20px 0;    
     
+}
+
+.olsito + ol{
+    background-color: red;
 }
 
 main > div > ol, ul {
